@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      gold_books:
+        title: Gold Books
+#        article: masculino/femenino
+    gold_books:
+      admin:
+        gold_books:
+          actions:
+            create_new: Crear nuevo gold book
+            reorder: Reordenar gold books
+            reorder_done: Reordenación de gold books completada
+          records:
+            title: Gold Books
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay gold books todavía. Pulsa en "Crear nuevo Gold Book" para crear tu primer gold book.
+          gold_book:
+            view_live_html: Ver este gold book como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este gold book
+            delete: Borrar este gold book para siempre
+      gold_books:
+        show:
+          other: Otros gold books
+  activerecord:
+    attributes:
+      'refinery/gold_books/gold_book':
+        content: Content
+        author: Author

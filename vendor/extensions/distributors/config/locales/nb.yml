@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      distributors:
+        title: Distributors
+    distributors:
+      admin:
+        distributors:
+          actions:
+            create_new: Lag en ny Distributor
+            reorder: Endre rekkefølgen på Distributors
+            reorder_done: Ferdig å endre rekkefølgen Distributors
+          records:
+            title: Distributors
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Distributors enda. Klikk på "Lag en ny Distributor" for å legge til din første distributor.
+          distributor:
+            view_live_html: Vis hvordan denne distributor ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne distributor
+            delete: Fjern denne distributor permanent
+      distributors:
+        show:
+          other: Andre Distributors
+  activerecord:
+    attributes:
+      'refinery/distributors/distributor':
+        type: Type
+        name: Name
+        website: Website
+        address: Address

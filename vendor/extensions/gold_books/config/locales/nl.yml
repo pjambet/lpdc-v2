@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      gold_books:
+        title: Gold Books
+    gold_books:
+      admin:
+        gold_books:
+          actions:
+            create_new: Maak een nieuwe Gold Book
+            reorder: Wijzig de volgorde van de Gold Books
+            reorder_done: Klaar met het wijzingen van de volgorde van de Gold Books
+          records:
+            title: Gold Books
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Gold Books. Druk op 'Maak een nieuwe Gold Book' om de eerste aan te maken.
+          gold_book:
+            view_live_html: Bekijk deze gold book op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze gold book
+            delete: Verwijder deze gold book voor eeuwig
+      gold_books:
+        show:
+          other: Andere Gold Books
+  activerecord:
+    attributes:
+      'refinery/gold_books/gold_book':
+        content: Content
+        author: Author

@@ -10,7 +10,7 @@
     end
   end
 
-  url = "/products"
+  url = "/produits"
   if defined?(Refinery::Page) && Refinery::Page.where(:link_url => url).empty?
     page = Refinery::Page.create(
       :title => 'Products',

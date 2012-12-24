@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      distributors:
+        title: Distributors
+    distributors:
+      admin:
+        distributors:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Distributor
+            reorder: Réordonner les Distributors
+            reorder_done: Fin de réordonnancement des Distributors
+          records:
+            title: Distributors
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Distributor. Cliquer sur "Créer un(e) nouve(au/l/lle) Distributor" pour créer votre premi(er/ère) distributor.'
+          distributor:
+            view_live_html: Voir ce(t/tte) distributor <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) distributor
+            delete: Supprimer définitivement ce(t/tte) distributor
+      distributors:
+        show:
+          other: Autres Distributors
+  activerecord:
+    attributes:
+      'refinery/distributors/distributor':
+        type: Type
+        name: Name
+        website: Website
+        address: Address

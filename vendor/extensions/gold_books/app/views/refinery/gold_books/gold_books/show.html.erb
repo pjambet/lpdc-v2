@@ -1,0 +1,33 @@
+<% content_for :body_content_title do %>
+  <%= @gold_book.author %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @gold_book.content %>
+    </p>
+  </section>
+  <section>
+    <h1>Author</h1>
+    <p>
+      <%=raw @gold_book.author %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="gold_books">
+      <% @gold_books.each do |gold_book| %>
+        <li>
+          <%= link_to gold_book.author, refinery.gold_books_gold_book_path(gold_book) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

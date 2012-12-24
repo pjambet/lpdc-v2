@@ -1,0 +1,5 @@
+%article#body_content
+  = raw @page.content_for(:body)
+
+- content_for :aside_content do
+  = raw @page.content_for(:side_body)

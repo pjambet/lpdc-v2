@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121224063136) do
+ActiveRecord::Schema.define(:version => 20121224220318) do
+
+  create_table "refinery_distributors", :force => true do |t|
+    t.text     "distributor_type"
+    t.string   "name"
+    t.string   "website"
+    t.string   "address"
+    t.integer  "position"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "refinery_gold_books", :force => true do |t|
+    t.text     "content"
+    t.string   "author"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -23,6 +41,15 @@ ActiveRecord::Schema.define(:version => 20121224063136) do
     t.string   "image_ext"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "refinery_news_items", :force => true do |t|
+    t.text     "content"
+    t.string   "title"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.boolean  "published"
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|
@@ -89,6 +116,7 @@ ActiveRecord::Schema.define(:version => 20121224063136) do
 
   create_table "refinery_products", :force => true do |t|
     t.string   "title"
+    t.string   "paypal_id"
     t.datetime "date"
     t.integer  "photo_id"
     t.text     "blurb"

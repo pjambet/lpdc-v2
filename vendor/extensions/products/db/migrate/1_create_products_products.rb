@@ -3,6 +3,7 @@ class CreateProductsProducts < ActiveRecord::Migration
   def up
     create_table :refinery_products do |t|
       t.string :title
+      t.string :paypal_id
       t.datetime :date
       t.integer :photo_id
       t.text :blurb

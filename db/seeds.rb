@@ -11,3 +11,12 @@ Refinery::Pages::Engine.load_seed
 
 # Added by Refinery CMS Products extension
 Refinery::Products::Engine.load_seed
+
+# Added by Refinery CMS Gold Books extension
+Refinery::GoldBooks::Engine.load_seed
+
+# Added by Refinery CMS Distributors extension
+Refinery::Distributors::Engine.load_seed
+
+# Added by Refinery CMS News Items extension
+Refinery::NewsItems::Engine.load_seed

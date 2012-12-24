@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      distributors:
+        title: Distributors
+#        article: masculino/femenino
+    distributors:
+      admin:
+        distributors:
+          actions:
+            create_new: Crear nuevo distributor
+            reorder: Reordenar distributors
+            reorder_done: Reordenación de distributors completada
+          records:
+            title: Distributors
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay distributors todavía. Pulsa en "Crear nuevo Distributor" para crear tu primer distributor.
+          distributor:
+            view_live_html: Ver este distributor como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este distributor
+            delete: Borrar este distributor para siempre
+      distributors:
+        show:
+          other: Otros distributors
+  activerecord:
+    attributes:
+      'refinery/distributors/distributor':
+        type: Type
+        name: Name
+        website: Website
+        address: Address

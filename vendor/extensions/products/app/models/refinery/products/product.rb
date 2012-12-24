@@ -3,7 +3,7 @@ module Refinery
     class Product < Refinery::Core::BaseModel
       self.table_name = 'refinery_products'
 
-      attr_accessible :title, :date, :photo_id, :blurb, :price, :position
+      attr_accessible :title, :date, :photo_id, :blurb, :price, :paypal_id, :position
 
       acts_as_indexed :fields => [:title, :blurb]
 

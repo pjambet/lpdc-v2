@@ -24,6 +24,8 @@
     #main-container
       #main.wrapper.clearfix
         = yield
+        %aside
+          = yield :aside_content
     #footer-container
       %footer.wrapper
         %h3

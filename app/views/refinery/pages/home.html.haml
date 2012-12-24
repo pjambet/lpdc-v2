@@ -1,0 +1,11 @@
+
+%article
+  - Refinery::NewsItems::NewsItem.published.each do |ni|
+    = ni.title
+    != ni.content
+
+  != @page.content_for(:body)
+
+- content_for :aside_content do
+  != @page.content_for(:side_body)
+
