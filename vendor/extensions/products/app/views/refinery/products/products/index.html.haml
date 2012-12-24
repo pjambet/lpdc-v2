@@ -1,0 +1,7 @@
+- content_for :body do
+  %ul#products
+    - @products.each do |product|
+      %li
+        = link_to product.title, refinery.products_product_path(product)
+= render '/refinery/content_page'
+

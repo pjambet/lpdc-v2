@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %meta{content: 'Découvrez les délicieuses Pralines de Claire. Amandes, cajou, noisettes ... Trouvez votre bonheur !', lang: 'fr', name: 'description'}
+    %title Les Pralines de Claire
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    #header-container
+      %header.wrapper.clearfix
+        %h1#title
+          %a{href: '/'} Les Pralines de Claire
+        %nav
+          %ul
+            %li
+              %a{href: "/" } Accueil
+            %li
+              %a{href: "/produits"}Mes produits
+            %li
+              %a{href: "/contact"}Contact
+            %li
+              %a{href: "/distributeurs"}Distributeurs
+    #main-container
+      #main.wrapper.clearfix
+        = yield
+    #footer-container
+      %footer.wrapper
+        %h3
+          Les Pralines de Claire -
+          %a{href: "mailto:contact@lespralinesdeclaire.fr"} contact@lespralinesdeclaire.fr
+          06 64 12 91 23
+
+
