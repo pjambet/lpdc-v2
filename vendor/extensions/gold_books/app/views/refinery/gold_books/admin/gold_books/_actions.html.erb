@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::GoldBooks::Admin::GoldBooksController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.gold_books_admin_gold_books_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_gold_books_admin_gold_book_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::GoldBooks::Admin::GoldBooksController.sortable? && ::Refinery::GoldBooks::GoldBook.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Gold Books"),
+                 refinery.gold_books_admin_gold_books_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Gold Books"),
+                 refinery.gold_books_admin_gold_books_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

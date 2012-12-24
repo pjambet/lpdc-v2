@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      gold_books:
+        title: Gold Books
+    gold_books:
+      admin:
+        gold_books:
+          actions:
+            create_new: Lag en ny Gold Book
+            reorder: Endre rekkefølgen på Gold Books
+            reorder_done: Ferdig å endre rekkefølgen Gold Books
+          records:
+            title: Gold Books
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Gold Books enda. Klikk på "Lag en ny Gold Book" for å legge til din første gold book.
+          gold_book:
+            view_live_html: Vis hvordan denne gold book ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne gold book
+            delete: Fjern denne gold book permanent
+      gold_books:
+        show:
+          other: Andre Gold Books
+  activerecord:
+    attributes:
+      'refinery/gold_books/gold_book':
+        content: Content
+        author: Author

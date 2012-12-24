@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      gold_books:
+        title: Gold Books
+    gold_books:
+      admin:
+        gold_books:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Gold Book
+            reorder: Réordonner les Gold Books
+            reorder_done: Fin de réordonnancement des Gold Books
+          records:
+            title: Gold Books
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Gold Book. Cliquer sur "Créer un(e) nouve(au/l/lle) Gold Book" pour créer votre premi(er/ère) gold book.'
+          gold_book:
+            view_live_html: Voir ce(t/tte) gold book <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) gold book
+            delete: Supprimer définitivement ce(t/tte) gold book
+      gold_books:
+        show:
+          other: Autres Gold Books
+  activerecord:
+    attributes:
+      'refinery/gold_books/gold_book':
+        content: Content
+        author: Author

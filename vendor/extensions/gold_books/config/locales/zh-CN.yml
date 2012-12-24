@@ -1,0 +1,30 @@
+zh-CN:
+  refinery:
+    plugins:
+      gold_books:
+        title: Gold Books
+    gold_books:
+      admin:
+        gold_books:
+          actions:
+            create_new: 建立新的 Gold Book
+            reorder: 对 Gold Books 重新排序
+            reorder_done: 对 Gold Books 的重新排序结束
+          records:
+            title: Gold Books
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Gold Books yet. Click "Add New Gold Book" to add your first gold book.
+            no_items_yet: 目前没有 Gold Books . 点击 "Add New Gold Book" 创建一个gold book.
+          gold_book:
+            view_live_html: 查看 gold book 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 gold book
+            delete: 永久删除 gold book
+      gold_books:
+        show:
+          other: 其他 Gold Books
+  activerecord:
+    attributes:
+      'refinery/gold_books/gold_book':
+        content: Content
+        author: Author

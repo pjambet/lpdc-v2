@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      gold_books:
+        title: Gold Books
+    gold_books:
+      admin:
+        gold_books:
+          actions:
+            create_new: Add New Gold Book
+            reorder: Reorder Gold Books
+            reorder_done: Done Reordering Gold Books
+          records:
+            title: Gold Books
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Gold Books yet. Click "Add New Gold Book" to add your first gold book.
+          gold_book:
+            view_live_html: View this gold book live <br/><em>(opens in a new window)</em>
+            edit: Edit this gold book
+            delete: Remove this gold book forever
+      gold_books:
+        show:
+          other: Other Gold Books
+  activerecord:
+    attributes:
+      'refinery/gold_books/gold_book':
+        content: Content
+        author: Author

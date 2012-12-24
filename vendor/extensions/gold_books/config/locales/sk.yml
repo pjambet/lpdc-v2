@@ -1,0 +1,28 @@
+sk:
+  refinery:
+    plugins:
+      gold_books:
+        title: Gold Books
+    gold_books:
+      admin:
+        gold_books:
+          actions:
+            create_new: Pridať Gold Book
+            reorder: Preusporiadať Gold Books
+            reorder_done: Koniec radenia Gold Books
+          records:
+            title: Gold Books
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Gold Books. Kliknite na "Pridať Gold Book" pre pridanie prvého gold book.
+          gold_book:
+            view_live_html: Zobraziť náhľad gold book<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť gold book
+            delete: Zmazať gold book
+      gold_books:
+        show:
+          other: Daľšie Gold Books
+  activerecord:
+    attributes:
+      'refinery/gold_books/gold_book':
+        content: Content
+        author: Author

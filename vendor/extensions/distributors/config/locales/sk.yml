@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      distributors:
+        title: Distributors
+    distributors:
+      admin:
+        distributors:
+          actions:
+            create_new: Pridať Distributor
+            reorder: Preusporiadať Distributors
+            reorder_done: Koniec radenia Distributors
+          records:
+            title: Distributors
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Distributors. Kliknite na "Pridať Distributor" pre pridanie prvého distributor.
+          distributor:
+            view_live_html: Zobraziť náhľad distributor<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť distributor
+            delete: Zmazať distributor
+      distributors:
+        show:
+          other: Daľšie Distributors
+  activerecord:
+    attributes:
+      'refinery/distributors/distributor':
+        type: Type
+        name: Name
+        website: Website
+        address: Address

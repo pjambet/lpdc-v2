@@ -1,7 +1,14 @@
-- content_for :body do
+%article
+  %article
+    != @page.content_for(:body)
   %ul#products
     - @products.each do |product|
       %li
-        = link_to product.title, refinery.products_product_path(product)
-= render '/refinery/content_page'
+        = product.title
+        = product.price
+        = image_tag product.photo.url, width: '550'
+        != product.blurb
+
+- content_for :aside_content do
+  != @page.content_for(:side_body)
 
