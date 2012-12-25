@@ -62,6 +62,11 @@
     <%= f.text_field :paypal_id  -%>
   </div>
 
+  <div class='field'>
+    <%= f.label :published -%>
+    <%= f.check_box :published  -%>
+  </div>
+
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.products.admin.products.product'),
