@@ -28,7 +28,7 @@ module Refinery
     protected
 
       def find_all_gold_books
-        @gold_books = GoldBook.order('position ASC')
+        @gold_books = GoldBook.order('created_at DESC')
       end
 
       def find_page
