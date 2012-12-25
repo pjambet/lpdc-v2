@@ -1,11 +1,17 @@
 
 %article
-  - Refinery::NewsItems::NewsItem.published.each do |ni|
-    = ni.title
-    != ni.content
+  %article#news
+    %h2 Actualites
+    - news = Refinery::NewsItems::NewsItem.order('position ASC').published
+    - news.each do |ni|
+      = ni.title
+      != ni.content
+      - if ni != news.last
+        %hr
 
-  != @page.content_for(:body)
+  %article#home
+    != @page.content_for(:body)
 
-- content_for :aside_content do
-  != @page.content_for(:side_body)
+  - content_for :aside_content do
+    != @page.content_for(:side_body)
 
