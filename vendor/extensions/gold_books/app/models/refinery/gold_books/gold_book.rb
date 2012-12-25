@@ -5,9 +5,9 @@ module Refinery
 
       attr_accessible :content, :author, :position
 
-      acts_as_indexed :fields => [:content, :author]
+      acts_as_indexed fields: [:content, :author]
 
-      validates :content, :presence => true, :uniqueness => true
+      validates :author, presence: true
     end
   end
 end
