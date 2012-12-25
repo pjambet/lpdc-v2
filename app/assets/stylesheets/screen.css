@@ -174,23 +174,6 @@ p {
   border-radius: 0;
 }
 
-.btn-primary {
-  background-color: rgb(247,96,0);
-  background-image: -moz-linear-gradient(top, rgb(249,157,0), rgb(247,96,0));
-  background-image: -ms-linear-gradient(top, rgb(249,157,0), rgb(247,96,0));
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(249,157,0)), to(rgb(247,96,0)));
-  background-image: -webkit-linear-gradient(top, rgb(249,157,0), rgb(247,96,0));
-  background-image: -o-linear-gradient(top, rgb(249,157,0), rgb(247,96,0));
-  background-image: linear-gradient(top, rgb(249,157,0), rgb(247,96,0));
-}
-
-.btn-primary:hover {
-  background-color: rgb(247,96,0);
-}
-
-.btn-primary:active{
-  background-color: rgb(247,96,0);
-}
 /* ===================
     ALL: Orange Theme
    =================== */
@@ -212,7 +195,7 @@ p {
 #title{ color:white; }
 #header-container #title{
   font: 54px ScriptMtBold, Arial;
-  margin: 7px 0 0 0;
+  margin: 5px 0 0 0;
 }
 
 header h1 a, header h1 a:hover, header h1 a:visited{

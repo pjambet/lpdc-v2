@@ -1,6 +1,11 @@
+@import 'compass'
+
 .icon-white
   background-image: image-url("glyphicons-halflings-white.png")
   background-repeat: no-repeat
+
+aside h3
+  line-height: 26px
 
 #products li .thumbnail
   background: image-url('bg.png') repeat
@@ -19,14 +24,30 @@
   ul
     padding: 0
 
+label[for='gold_book_author']
+  margin: 15px 0 0 0
+
 .gold-book-item, .distributor
   background: image-url('bg.png') repeat
-  -webkit-border-radius: 4px
-  -moz-border-radius: 4px
-  border-radius: 4px
   margin: 15px 0
   padding: 10px
   list-style: none
+  +border-radius(4px)
+
+.btn-primary
+  background-color: rgb(247,96,0)
+  background-image: -moz-linear-gradient(top, rgb(249,157,0), rgb(247,96,0))
+  background-image: -ms-linear-gradient(top, rgb(249,157,0), rgb(247,96,0))
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(249,157,0)), to(rgb(247,96,0)))
+  background-image: -webkit-linear-gradient(top, rgb(249,157,0), rgb(247,96,0))
+  background-image: -o-linear-gradient(top, rgb(249,157,0), rgb(247,96,0))
+  background-image: linear-gradient(top, rgb(249,157,0), rgb(247,96,0))
+
+.btn-primary:hover
+  background-color: rgb(247,96,0)
+
+.btn-primary:active
+  background-color: rgb(247,96,0)
 
 @media only screen and (max-width: 480px)
   #products li .btn:after
