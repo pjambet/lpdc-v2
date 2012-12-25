@@ -7,7 +7,7 @@ gem 'unicorn'
 gem 'pg'
 gem 'haml'
 gem 'fog'
-
+gem 'newrelic_rpm'
 
 gem 'refinerycms', '~> 2.0.0'
 
