@@ -4,7 +4,7 @@
     - @distributors.each do |distributor|
       %li.distributor
         %h3= link_to distributor.name, distributor.website
-        %p!= "#{distributor.distributor_type} - #{distributor.address}"
+        %p!= [distributor.distributor_type, distributor.address].select{|i| i.present?}.join(' - ')
 
 - content_for :aside_content do
   != @page.content_for(:side_body)

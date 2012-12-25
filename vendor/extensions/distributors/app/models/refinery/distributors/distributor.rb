@@ -7,7 +7,6 @@ module Refinery
 
       acts_as_indexed fields: [:distributor_type, :name, :website, :address]
 
-      validates :distributor_type, presence: true, uniqueness: true
     end
   end
 end
