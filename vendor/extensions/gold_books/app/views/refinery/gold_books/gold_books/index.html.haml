@@ -1,10 +1,12 @@
-%article
+%article#gold_book
+  != @page.content_for(:body)
   %ul#gold_books
     - @gold_books.each do |gold_book|
-      %li
+      %li.gold-book-item
         - time = gold_book.created_at
         %time= "#{time.day}-#{time.month}-#{time.year}"
-        %h3= gold_book.author
+        %h3
+          Ecrit par
+          %em= gold_book.author
+        %p!= gold_book.content
 
-- content_for :aside_content do
-  = 'side body hardcoded'
