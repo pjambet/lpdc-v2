@@ -1,13 +1,43 @@
-%article
-  %article
+%article#products
+  %header
     != @page.content_for(:body)
-  %ul#products
-    - @products.each do |product|
-      %li
-        = product.title
-        = product.price
-        = image_tag product.photo.url, width: '550'
-        != product.blurb
+  %section
+    #myCarousel.carousel.slide
+      .carousel-inner
+        - Refinery::Image.all.each_with_index do |image, i|
+          .item{class: i == 0 ? 'active' : ''}
+            = image_tag image.url, width: '400'
+
+      %a.left.carousel-control{"data-slide" => "prev", href: "#myCarousel"} &lsaquo;
+      %a.right.carousel-control{"data-slide" => "next", href: "#myCarousel"} &rsaquo;
+
+  %section#product-list
+    %h2 Les pralines
+    %ul
+      - @products.each do |product|
+        %li
+          %form{action: "https://www.paypal.com/cgi-bin/webscr", method: "post", target: "paypal"}
+            %input{name: "cmd", type: "hidden", value: "_s-xclick"}
+            %input{name: "hosted_button_id", type: "hidden", value: product.paypal_id}
+            - header_id = "accordion-#{product.slug}"
+            .accordion{id: header_id}
+              - collapse_id = "collapse-#{product.slug}"
+              %a.accordion-toggle{"data-parent" => header_id, "data-toggle" => "collapse", href: "##{collapse_id}"}
+                = product.title
+                .product-info
+                  %span.price= "#{product.price.round} €"
+                  %span.product-detauls= "le sachet(#{product.weight}g)"
+                %span (en savoir plus)
+                %i.icon-chevron-right
+            .accordion-body.collapse{id: collapse_id}
+              .thumbnail
+                = image_tag product.photo.url, width: '550'
+                %p!= product.blurb
+
+            %a.add-to-cart.btn{href: "#"}
+              %i.icon-plus
+              Ajouter au panier
+            %img{alt: "", src: "https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif"}/
 
 - content_for :aside_content do
   != @page.content_for(:side_body)

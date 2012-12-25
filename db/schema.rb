@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121224220318) do
+ActiveRecord::Schema.define(:version => 20121225012437) do
 
   create_table "refinery_distributors", :force => true do |t|
-    t.text     "distributor_type"
+    t.string   "distributor_type"
     t.string   "name"
     t.string   "website"
     t.string   "address"
@@ -124,6 +124,8 @@ ActiveRecord::Schema.define(:version => 20121224220318) do
     t.integer  "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.float    "weight"
+    t.string   "slug"
   end
 
   create_table "refinery_resources", :force => true do |t|

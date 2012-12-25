@@ -2,7 +2,7 @@ Refinery::Core::Engine.routes.append do
 
   # Frontend routes
   namespace :gold_books, path: 'livre_dor' do
-    resources :gold_books, path: '', only: :index
+    resources :gold_books, path: '', only: [:index, :create]
   end
 
   # Admin routes
