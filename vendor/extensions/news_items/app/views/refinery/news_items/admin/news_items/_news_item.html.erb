@@ -1,6 +1,6 @@
 <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(news_item) -%>">
   <span class='title'>
-    <%= news_item.title %>
+    <%= truncate(strip_tags(news_item.content), length: 100) %>
 
   </span>
   <span class='actions'>
