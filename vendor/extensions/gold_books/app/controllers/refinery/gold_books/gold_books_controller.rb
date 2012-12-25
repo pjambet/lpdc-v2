@@ -11,6 +11,12 @@ module Refinery
         present(@page)
       end
 
+      def create
+        @gold_book = GoldBook.new params[:gold_book]
+        @gold_book.save
+        render :index
+      end
+
       def show
         @gold_book = GoldBook.find(params[:id])
 

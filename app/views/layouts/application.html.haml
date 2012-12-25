@@ -5,6 +5,7 @@
     %title Les Pralines de Claire
     = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
+    %script{src: "//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"}
     = csrf_meta_tags
   %body
     #header-container
@@ -26,6 +27,7 @@
         = yield
         %aside
           = yield :aside_content
+          = render partial: 'shared/gold_book'
     #footer-container
       %footer.wrapper
         %h3

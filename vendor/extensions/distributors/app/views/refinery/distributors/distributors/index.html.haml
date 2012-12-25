@@ -1,11 +1,10 @@
 %article
+  != @page.content_for(:body)
   %ul#distributors
     - @distributors.each do |distributor|
-      %li
-        = distributor.name
-        = distributor.website
-        != distributor.distributor_type
-        = distributor.address
+      %li.distributor
+        %h3= link_to distributor.website, distributor.name
+        %p!= "#{distributor.distributor_type} - #{distributor.address}"
 
 - content_for :aside_content do
   != @page.content_for(:side_body)
