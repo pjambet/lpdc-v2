@@ -2,11 +2,12 @@
   != @page.content_for(:body)
   %ul#gold_books
     - @gold_books.each do |gold_book|
-      %li.gold-book-item
-        - time = gold_book.created_at
-        %time= "#{time.day}-#{time.month}-#{time.year}"
-        %h3
-          Ecrit par
-          %em= gold_book.author
-        %p!= gold_book.content
+      - if gold_book.content.present?
+        %li.gold-book-item
+          - time = gold_book.created_at
+          %time= "#{time.day}-#{time.month}-#{time.year}"
+          %h3
+            Ecrit par
+            %em= gold_book.author
+          %p!= gold_book.content
 
