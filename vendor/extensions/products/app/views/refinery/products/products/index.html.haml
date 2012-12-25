@@ -26,7 +26,7 @@
                 = product.title
                 .product-info
                   %span.price= "#{product.price.round} €"
-                  %span.product-detauls= "le sachet(#{product.weight}g)"
+                  %span.product-detauls= "le sachet(#{product.weight.round}g)"
                 %span (en savoir plus)
                 %i.icon-chevron-right
             .accordion-body.collapse{id: collapse_id}

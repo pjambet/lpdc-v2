@@ -1,8 +1,8 @@
 = form_for @gold_book, url: '/livre_dor' do |f|
-  = f.label :content
+  = f.label :content, 'Votre message'
   = f.text_area :content, rows: 3
-  = f.label :author
+  = f.label :author, 'Votre nom'
   = f.text_field :author
-  = f.submit class: 'btn btn-primary'
+  = f.submit 'Envoyer', class: 'btn btn-primary'
   %a{href: '/livre_dor'} Consultez le livre d'or
 
