@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225012437) do
+ActiveRecord::Schema.define(:version => 20121225225724) do
 
   create_table "refinery_distributors", :force => true do |t|
     t.string   "distributor_type"
@@ -126,6 +126,7 @@ ActiveRecord::Schema.define(:version => 20121225012437) do
     t.datetime "updated_at", :null => false
     t.float    "weight"
     t.string   "slug"
+    t.boolean  "published"
   end
 
   create_table "refinery_resources", :force => true do |t|

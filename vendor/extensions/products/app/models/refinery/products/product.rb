@@ -3,7 +3,7 @@ module Refinery
     class Product < Refinery::Core::BaseModel
       self.table_name = 'refinery_products'
 
-      attr_accessible :title, :date, :photo_id, :blurb, :price, :paypal_id, :position, :slug, :weight
+      attr_accessible :title, :date, :photo_id, :blurb, :price, :paypal_id, :position, :slug, :weight, :published
 
       acts_as_indexed fields: [:title, :blurb]
 
@@ -14,6 +14,11 @@ module Refinery
       before_save do
         self.slug = self.title.parameterize
       end
+
+      scope :published, -> do
+        where('published = true')
+      end
+
     end
   end
 end
