@@ -38,6 +38,15 @@
               %i.icon-plus
               Ajouter au panier
             %img{alt: "", src: "https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif"}/
+  %form{action: "https://www.paypal.com/cgi-bin/webscr", method: "post", target: "paypal"}
+    %input{name: "cmd", type: "hidden", value: "_cart"}/
+    %input{name: "business", type: "hidden", value: "NBJLQ7LDMRX2N"}/
+    %input{name: "display", type: "hidden", value: "1"}/
+    %a#checkout.btn.btn-primary{href: "#"}
+      %i.icon-shopping-cart.icon-white
+      Cliquez ici pour visualiser votre panier
+    %img{alt: "", src: "https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif"}/
+
 
 - content_for :aside_content do
   != @page.content_for(:side_body)
