@@ -31,8 +31,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'refinerycms-products', :path => 'vendor/extensions'
+gem 'refinerycms-products', path: 'vendor/extensions'
 
-gem 'refinerycms-gold_books', :path => 'vendor/extensions'
-gem 'refinerycms-distributors', :path => 'vendor/extensions'
-gem 'refinerycms-news_items', :path => 'vendor/extensions'
+gem 'refinerycms-gold_books', path: 'vendor/extensions'
+gem 'refinerycms-distributors', path: 'vendor/extensions'
+gem 'refinerycms-news_items', path: 'vendor/extensions'
