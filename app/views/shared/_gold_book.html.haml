@@ -3,6 +3,7 @@
   = f.text_area :content, rows: 3
   = f.label :author, 'Votre nom'
   = f.text_field :author
+  %input{name: 'flare', type: 'text'}
   = f.submit 'Envoyer', class: 'btn btn-primary'
   %a{href: '/livre_dor'} Consultez le livre d'or
 

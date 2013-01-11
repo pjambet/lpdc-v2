@@ -13,7 +13,8 @@ module Refinery
 
       def create
         @gold_book = GoldBook.new params[:gold_book]
-        @gold_book.save
+        @gold_book.save unless params[:flare].present?
+        @gold_book = GoldBook.new
         render :index
       end
 
