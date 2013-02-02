@@ -13,7 +13,9 @@ module Refinery
 
       def create
         @gold_book = GoldBook.new params[:gold_book]
-        @gold_book.save unless params[:flare].present?
+        if params[:flare].blank? && !spam?
+          @gold_book.save
+        end
         @gold_book = GoldBook.new
         render :index
       end
@@ -34,6 +36,16 @@ module Refinery
 
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/livre_dor").first
+      end
+
+      def spam?
+        time_to_comment = Time.now - session['antispam_timestamp']
+        if time_to_comment < Rails.configuration.antispam_threshold
+          flash[:notice] = "Votre commentaire n'a pu etre ajoute, veuillez reessayer"
+          true
+        else
+          false
+        end
       end
 
     end
