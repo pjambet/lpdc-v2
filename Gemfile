@@ -9,6 +9,8 @@ gem 'haml'
 gem 'fog'
 gem 'newrelic_rpm'
 gem 'honeybadger'
+gem 'memcachier'
+gem 'dalli'
 
 gem 'refinerycms', '~> 2.0.0'
 
