@@ -19,6 +19,10 @@ module Refinery
         where('published = true')
       end
 
+      def formatted_price
+        "%g" % self.price
+      end
+
     end
   end
 end
