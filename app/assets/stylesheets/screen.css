@@ -285,6 +285,8 @@ nav a:hover{
 #products li{
   list-style: none;
   margin-bottom: 20px;
+  max-width: 100%;
+  overflow: hidden;0px;
 }
 
 #products li a{
