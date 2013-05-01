@@ -11,6 +11,7 @@ gem 'newrelic_rpm'
 gem 'honeybadger'
 gem 'memcachier'
 gem 'dalli'
+gem 'sentry-raven'
 
 gem 'refinerycms', '~> 2.0.0'
 
