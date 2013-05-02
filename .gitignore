@@ -110,3 +110,4 @@ rerun.txt
 pickle-email-*.html
 config/database.yml
 secret_token
+.ruby-version
