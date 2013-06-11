@@ -286,7 +286,6 @@ nav a:hover{
   list-style: none;
   margin-bottom: 20px;
   max-width: 100%;
-  overflow: hidden;
   padding-bottom: 20px;
 }
 
@@ -543,6 +542,11 @@ aside form:before {
    Media Queries
    ========================================================================== */
 @media only screen and (max-width: 480px) {
+
+  #products li {
+    overflow: hidden;
+  }
+
   #products li span {
     display: none;
   }
